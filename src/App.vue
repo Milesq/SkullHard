@@ -54,7 +54,7 @@ body {
 
   .main-page__footer {
     position: absolute;
-    bottom: 0;
+    bottom: 10vh;
     width: 100% - (100 / 6);
     height: 2em;
   }
