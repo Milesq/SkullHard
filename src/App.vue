@@ -44,7 +44,7 @@ body {
 
 #app {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 3fr 16fr;
   grid-template-rows: $header-height 1fr;
 
   .main-page__header {
