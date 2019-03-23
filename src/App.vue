@@ -1,15 +1,11 @@
 <template>
   <div id="app">
-    <section>
-      <Header />
-    </section>
+    <Header class="main-page__header" />
+    <Navigation class="main-page__nav" />
 
     <section>
-      <Navigation />
-      <section>
-        <Content />
-        <Footer />
-      </section>
+      <Content class="main-page__content" />
+      <Footer class="main-page__footer" />
     </section>
   </div>
 </template>
@@ -29,3 +25,38 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import './variables';
+
+body {
+  background-color: $main-color;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+
+  &,
+  #app {
+    height: 100vh;
+  }
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: $header-height 1fr;
+
+  .main-page__header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .main-page__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100% - (100 / 6);
+    height: 2em;
+  }
+}
+</style>
