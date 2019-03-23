@@ -94,7 +94,7 @@ export default {
   }
 
   &--image {
-    $size: 200px;
+    $size: 150px;
     height: $size;
     width: $size;
 
