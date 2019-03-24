@@ -43,11 +43,11 @@ article:not(.partners) span {
   i {
     margin-right: 5px;
     font-size: 28px;
-    color: white;
+    color: $text-color;
   }
 }
 
-.partners {
+article.partners {
   color: $border-color;
 
   span {
@@ -58,5 +58,6 @@ article:not(.partners) span {
 .title,
 .partners {
   text-transform: uppercase;
+  color: $text-color;
 }
 </style>

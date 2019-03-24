@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/variables.scss';
+
 main {
   display: flex;
   justify-content: space-around;
@@ -40,6 +42,7 @@ main {
 
 .about {
   text-align: center;
+  color: $text-color;
 
   &::first-line {
     text-transform: uppercase;

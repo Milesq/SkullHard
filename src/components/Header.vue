@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <span @click="home" class="header__logo">
-      skull<span>hard.pl</span>
+      <span class="text">skull</span><span class="red-text">hard.pl</span>
     </span>
-    <span class="header__online-players">
+    <span class="header__online-players text">
       <span>aktualnie online:</span> 2594
     </span>
     <span @click="home" class="header__logo header__logo--image">
@@ -13,9 +13,9 @@
       <img
         src="https://www.countryflags.io/pl/flat/32.png"
         alt="Ikona wyboru języka">
-      <span>polski</span>
+      <span class="text">polski</span>
     </span>
-    <span class="header__admin">panel administracyjny</span>
+    <span class="header__admin text">panel administracyjny</span>
   </header>
 </template>
 
@@ -89,8 +89,8 @@ export default {
 
 .header__logo {
   user-select: none;
-  & > span {
-    color: $logo-color;
+  & > .red-text {
+    color: $border-color;
   }
 
   &--image {
@@ -106,5 +106,9 @@ export default {
       top: $size / 2 * (.75);
     }
   }
+}
+
+.text {
+  color: $text-color;
 }
 </style>

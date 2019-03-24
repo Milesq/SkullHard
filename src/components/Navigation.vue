@@ -80,7 +80,8 @@ export default {
 
 .nav {
   color: $text-color;
-  margin-left: 5%;
+  background-color: $nav-color;
+  padding-left: 5%;
   padding-top: 20px;
   border-right: $border-color 1px solid;
   font-size: 17px;
