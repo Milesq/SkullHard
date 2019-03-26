@@ -3,4 +3,9 @@ before_script:
     - yarn
 node_js:
     - "10.15.3"
-cache: yarn
+cache:
+    directories:
+        -node_modules
+branches:
+    only:
+        - master
