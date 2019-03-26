@@ -1,30 +1,12 @@
 <template>
   <div id="app">
-    <Header class="main-page__header" />
-    <Navigation class="main-page__nav" />
-
-    <section>
-      <Content class="main-page__content" />
-      <Footer class="main-page__footer" />
-    </section>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import Header from './components/Header'
-import Navigation from './components/Navigation'
-import Content from './components/Content'
-import Footer from './components/Footer'
-
-export default {
-  components: {
-    Header,
-    Navigation,
-    Content,
-    Footer
-  }
-}
-</script>
 
 <style lang="scss">
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
