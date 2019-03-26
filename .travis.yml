@@ -1,6 +1,8 @@
 language: node_js
 before_script:
     - yarn
+script:
+    - yarn lint
 node_js:
     - "10.15.3"
 cache:
