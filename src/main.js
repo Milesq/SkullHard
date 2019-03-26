@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import Gql from './libs/gql'
 
 Vue.config.productionTip = false
+
+Vue.use(Gql, {
+  url: 'https://api-euwest.graphcms.com/v1/cjtq7hrbq273s01b9qumn7j8j/master'
+})
 
 new Vue({
   router,

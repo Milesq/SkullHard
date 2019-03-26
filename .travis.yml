@@ -3,6 +3,7 @@ before_script:
     - yarn
 script:
     - yarn lint
+    - yarn build
 node_js:
     - "10.15.3"
 cache:
