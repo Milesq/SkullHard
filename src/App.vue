@@ -4,7 +4,7 @@
     <Navigation class="main-page__nav" />
 
     <section>
-      <Content class="main-page__content" />
+      <router-view></router-view>
       <Footer class="main-page__footer" />
     </section>
   </div>
@@ -13,13 +13,12 @@
 <script>
 import Header from './components/Header'
 import Navigation from './components/Navigation'
-import Content from './components/Content'
 import Footer from './components/Footer'
+
 export default {
   components: {
     Header,
     Navigation,
-    Content,
     Footer
   }
 }

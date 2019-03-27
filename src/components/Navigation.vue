@@ -1,16 +1,20 @@
 <template>
     <nav class="nav">
         <article>
+          <router-link to="/">
             <span class="menu__icon">
               <img src="@/assets/home.svg" alt="strona główna">
             </span>
             <span class="menu__content">strona główna</span>
+          </router-link>
         </article>
         <article>
+          <router-link to="/about">
             <span class="menu__icon">
               <img src="@/assets/table-chart.svg" alt="rankingi użytkowników">
             </span>
             <span class="menu__content">rankingi</span>
+          </router-link>
         </article>
         <article>
             <span class="menu__icon">
@@ -77,6 +81,14 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/variables.scss';
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $text-color + #222;
+  }
+}
 
 .nav {
   color: $text-color;
