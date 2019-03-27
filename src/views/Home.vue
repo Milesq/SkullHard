@@ -20,7 +20,7 @@
       tincidunt arcu non sodales neque.
     </article>
     <article class="some-else">
-      <img src="https://placeimg.com/400/250/any">
+      <img class="img-responsive" src="https://placeimg.com/400/250/any">
     </article>
   </main>
 </template>
@@ -32,12 +32,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/variables.scss';
+@import '@/mixins.scss';
 
 main {
   display: flex;
   justify-content: space-around;
   padding-top: 10%;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .about {
@@ -53,6 +57,22 @@ main {
 
 article {
   width: 40%;
-  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  &.some-else {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  @include phone {
+    width: 80%;
+  }
 }
+
+// .img-responsive {
+//   max-width: 100%;
+//   height: auto;
+// }
 </style>

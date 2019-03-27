@@ -1,4 +1,4 @@
-$phone: 768px;
+@import './variables.scss';
 
 .hide-on-phone {
   @media (max-width: $phone) {
@@ -9,5 +9,11 @@ $phone: 768px;
 .show-on-phone {
   @media (min-width: $phone) {
     display: none !important;
+  }
+}
+
+@mixin phone {
+  @media (max-width: $phone) {
+    @content;
   }
 }

@@ -5,7 +5,7 @@
 
     <section>
       <router-view></router-view>
-      <Footer class="main-page__footer" />
+      <!-- <Footer class="main-page__footer" /> -->
     </section>
   </div>
 </template>
@@ -25,12 +25,16 @@ export default {
     Header,
     Navigation,
     Footer
+  },
+  mounted () {
+    if (document.body.clientWidth < 565) {
+      this.active = false;
+    }
   }
 }
 </script>
 <style lang="scss">
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
-@import './variables';
 @import './mixins';
 
 body {
@@ -38,6 +42,10 @@ body {
   color: white;
   font-family: sans-serif;
   font-size: 18px;
+
+  max-width: 100vw;
+  width: 100vw;
+  overflow-x: hidden;
 
   &,
   #app {
@@ -50,7 +58,7 @@ body {
   grid-template-columns: 3fr 16fr;
   grid-template-rows: $header-height 1fr;
 
-  @media (max-width: $phone) {
+  @include phone {
     display: flex;
     flex-direction: column;
   }

@@ -105,7 +105,7 @@ export default {
     color: $border-color;
   }
 
-  @media (max-width: $phone) {
+  @include phone {
     font-size: 2em;
     font-weight: bold;
   }

@@ -1,51 +1,52 @@
 {
-  "root": true,
-  "env": {
-    "node": true
-  },
-  "extends": [
-    "plugin:vue/essential",
-    "@vue/standard"
-  ],
-  "rules": {
-    "rules": {
-      "import/extensions": [
-          "error",
-          "always",
-          {
-              "js": "never"
-          }
-      ],
-      "indent": [
-          "error",
-          4,
-          {
-              "outerIIFEBody": 0
-          }
-      ],
-      "linebreak-style": "off",
-      "no-debugger": "off",
-      "no-console": "off",
-      "comma-dangle": "off",
-      "no-tabs": "off",
-      "eol-last": "off",
-      "no-new": "off",
-      "no-unused-vars": "warn",
-      "arrow-parens": "off",
-      "no-throw-literal": "off",
-      "no-param-reassign": "off",
-      "new-parens": "off",
-      "no-restricted-globals": "off",
-      "prefer-template": "off",
-      "no-shadow": "off",
-      "no-alert": "off",
-      "no-unused-expressions": "off",
-      "no-useless-return": "off",
-      "no-plusplus": "off",
-      "semi": "off"
-  }
-  },
-  "parserOptions": {
-    "parser": "babel-eslint"
-  }
+	"root": true,
+	"parserOptions": {
+		"parser": "babel-eslint"
+	},
+	"env": {
+		"browser": true
+	},
+	"extends": ["plugin:vue/essential", "airbnb-base"],
+	"plugins": [
+		"vue"
+	],
+	"settings": {
+	 "import/resolver": {
+		"webpack": {
+			"config": "build/webpack.base.conf.js"
+		}
+	 }
+	},
+	"rules": {
+		"import/extensions": ["error", "always", {
+			"js": "never",
+			"vue": "never"
+		}],
+		"import/no-extraneous-dependencies": ["error", {
+			"optionalDependencies": ["test/unit/index.js"]
+		}],
+		"indent": [
+			"error",
+			"tab",
+			{
+				"outerIIFEBody": 0
+			}
+		],
+		"linebreak-style": "off",
+		"no-debugger": "off",
+		"no-console": "off",
+		"comma-dangle": "off",
+		"no-tabs": "off",
+		"eol-last": "off",
+		"no-new": "off",
+		"no-unused-vars": "warn",
+		"arrow-parens": "off",
+		"no-throw-literal": "off",
+		"no-param-reassign": "off",
+		"new-parens": "off",
+		"no-restricted-globals": "off",
+		"prefer-template": "off",
+		"no-shadow": "off",
+		"no-alert": "off"
+	}
 }
