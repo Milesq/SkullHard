@@ -1,5 +1,8 @@
 <template>
-    <nav class="nav">
+    <nav
+      :class="['nav', {
+        'menu--active': !active
+      }]">
         <article>
           <router-link to="/">
             <span class="menu__icon">
@@ -93,12 +96,15 @@
 
 <script>
 export default {
-
+  props: {
+    active: Boolean
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '@/variables.scss';
+
 a {
   color: $text-color;
   text-decoration: none;
@@ -115,6 +121,11 @@ a {
   padding-top: 20px;
   border-right: $border-color 1px solid;
   font-size: 17px;
+
+  // &--active {
+  //   height: 0;
+  //   overflow: hidden;
+  // }
 
   article {
     margin: $margin-between-opts 0;

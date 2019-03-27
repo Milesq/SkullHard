@@ -1,0 +1,13 @@
+$phone: 768px;
+
+.hide-on-phone {
+  @media (max-width: $phone) {
+    display: none !important;
+  }
+}
+
+.show-on-phone {
+  @media (min-width: $phone) {
+    display: none !important;
+  }
+}

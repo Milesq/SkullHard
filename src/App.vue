@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header class="main-page__header" />
-    <Navigation class="main-page__nav" />
+    <Navigation :active="true" class="main-page__nav" />
 
     <section>
       <router-view></router-view>

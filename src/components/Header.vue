@@ -3,27 +3,37 @@
     <span @click="home" class="header__logo">
       <span class="text">skull</span><span class="red-text">hard.pl</span>
     </span>
-    <span class="header__online-players text">
+    <span class="header__online-players text hide-on-phone">
       <span>aktualnie online:</span> 2594
     </span>
-    <span @click="home" class="header__logo header__logo--image">
+    <span @click="home" class="header__logo header__logo--image hide-on-phone">
       <img src="@/assets/logo.png" alt="">
     </span>
-    <span class="header__lang">
+    <span class="header__lang hide-on-phone">
       <img
         src="https://www.countryflags.io/pl/flat/32.png"
         alt="Ikona wyboru języka">
       <span class="text">polski</span>
     </span>
-    <span class="header__admin text">panel administracyjny</span>
+    <span class="header__admin text hide-on-phone">panel administracyjny</span>
+    <span
+      @click="$emit('menuChange')"
+      class="show-on-phone">
+      <Dropdown />
+    </span>
   </header>
 </template>
 
 <script>
+import Dropdown from '@/components/Dropdown'
+
 export default {
+  components: {
+    Dropdown
+  },
   methods: {
     home () {
-      window.location.href = ''
+      this.$router.push('/')
     }
   }
 }
@@ -31,6 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/variables.scss';
+@import '@/mixins.scss';
 
 *,
 *::before {
@@ -88,9 +99,15 @@ export default {
 }
 
 .header__logo {
+  cursor: pointer;
   user-select: none;
   & > .red-text {
     color: $border-color;
+  }
+
+  @media (max-width: $phone) {
+    font-size: 2em;
+    font-weight: bold;
   }
 
   &--image {
