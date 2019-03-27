@@ -1,7 +1,7 @@
 <template>
     <nav
       :class="['nav', {
-        'menu--active': !active
+        'nav--inactive': !active
       }]">
         <article>
           <router-link to="/">
@@ -121,11 +121,11 @@ a {
   padding-top: 20px;
   border-right: $border-color 1px solid;
   font-size: 17px;
+  transition: 1s all ease-in;
 
-  // &--active {
-  //   height: 0;
-  //   overflow: hidden;
-  // }
+  &--inactive {
+    display: none;
+  }
 
   article {
     margin: $margin-between-opts 0;

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header class="main-page__header" />
-    <Navigation :active="true" class="main-page__nav" />
+    <Header @menuChange="active = !active" class="main-page__header" />
+    <Navigation :active="active" class="main-page__nav" />
 
     <section>
       <router-view></router-view>
@@ -16,6 +16,11 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
 export default {
+  data () {
+    return {
+      active: true
+    }
+  },
   components: {
     Header,
     Navigation,
@@ -26,6 +31,7 @@ export default {
 <style lang="scss">
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import './variables';
+@import './mixins';
 
 body {
   background-color: $main-color;
@@ -43,6 +49,11 @@ body {
   display: grid;
   grid-template-columns: 3fr 16fr;
   grid-template-rows: $header-height 1fr;
+
+  @media (max-width: $phone) {
+    display: flex;
+    flex-direction: column;
+  }
 
   .main-page__header {
     grid-column-start: 1;
