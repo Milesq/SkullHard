@@ -4,5 +4,5 @@
 
 ## Technological stack
 
-- Vue
-- Vue-router
+- [Vue](https://vuejs.org/)
+- [Vue-router](https://router.vuejs.org)
