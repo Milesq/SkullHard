@@ -9,7 +9,7 @@
           </router-link>
         </article>
         <article>
-          <router-link to="/about">
+          <router-link to="/rankings">
             <span class="menu__icon">
               <img src="@/assets/table-chart.svg" alt="rankingi użytkowników">
             </span>
