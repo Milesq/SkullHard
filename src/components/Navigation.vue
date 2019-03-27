@@ -1,8 +1,7 @@
 <template>
-    <nav
-      :class="['nav', {
-        'nav--inactive': !active
-      }]">
+    <nav :class="['nav', {
+      active
+    }]">
         <article>
           <router-link to="/">
             <span class="menu__icon">
@@ -103,7 +102,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/variables.scss';
+@import '@/mixins.scss';
 
 a {
   color: $text-color;
@@ -123,8 +122,12 @@ a {
   font-size: 17px;
   transition: 1s all ease-in;
 
-  &--inactive {
+  @include phone {
     display: none;
+  }
+
+  &.active {
+    display: block;
   }
 
   article {

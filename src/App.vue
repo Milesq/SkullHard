@@ -13,7 +13,7 @@
 <script>
 import Header from './components/Header'
 import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 
 export default {
   data () {
@@ -23,13 +23,8 @@ export default {
   },
   components: {
     Header,
-    Navigation,
-    Footer
-  },
-  mounted () {
-    if (document.body.clientWidth < 565) {
-      this.active = false;
-    }
+    Navigation
+    // Footer
   }
 }
 </script>
