@@ -18,7 +18,7 @@ import Navigation from './components/Navigation'
 export default {
   data () {
     return {
-      active: true
+      active: false
     }
   },
   components: {
