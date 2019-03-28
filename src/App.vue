@@ -3,8 +3,8 @@
     <Header @menuChange="active = !active" class="main-page__header" />
     <Navigation :active="active" class="main-page__nav" />
 
-    <section>
-      <router-view></router-view>
+    <section class="content">
+      <router-view class="content__view"></router-view>
       <Footer class="main-page__footer" />
     </section>
   </div>
@@ -35,6 +35,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss">
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import './mixins';
@@ -71,14 +72,27 @@ body {
   }
 
   .main-page__footer {
-    position: absolute;
-    bottom: 10vh;
     width: 100% - (100 / 6);
-    height: 2em;
+    height: $footer-height;
 
     @include phone {
+      height: $footer-phone-height;
       width: 100%;
     }
   }
+}
+
+.content__view {
+  padding-bottom: $footer-height;
+
+  @include phone {
+    padding-bottom: $footer-phone-height;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
