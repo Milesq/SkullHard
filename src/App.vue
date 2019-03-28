@@ -46,7 +46,6 @@ body {
   font-family: sans-serif;
   font-size: 18px;
 
-  max-width: 100vw;
   width: 100vw;
   overflow-x: hidden;
 
@@ -74,19 +73,6 @@ body {
   .main-page__footer {
     width: 100% - (100 / 6);
     height: $footer-height;
-
-    @include phone {
-      height: $footer-phone-height;
-      width: 100%;
-    }
-  }
-}
-
-.content__view {
-  padding-bottom: $footer-height;
-
-  @include phone {
-    padding-bottom: $footer-phone-height;
   }
 }
 
@@ -94,5 +80,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__view {
+    min-height: 100vh - $header-height - $footer-height;
+
+    @include phone {
+      min-height: 100vh - $header-height - $footer-phone-height;
+    }
+  }
 }
 </style>
