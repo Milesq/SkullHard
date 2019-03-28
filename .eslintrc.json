@@ -42,7 +42,8 @@
       "no-unused-expressions": "off",
       "no-useless-return": "off",
       "no-plusplus": "off",
-      "semi": "off"
+      "semi": "off",
+      "no-extra-semi": "off"
   }
   },
   "parserOptions": {

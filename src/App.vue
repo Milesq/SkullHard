@@ -11,6 +11,8 @@
 </template>
 
 <script>
+/* eslint-disable semi */
+
 import Header from './components/Header'
 import Navigation from './components/Navigation'
 // import Footer from './components/Footer'
@@ -25,6 +27,11 @@ export default {
     Header,
     Navigation
     // Footer
+  },
+  watch: {
+    $route () {
+      this.active = false;
+    }
   }
 }
 </script>
