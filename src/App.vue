@@ -5,7 +5,7 @@
 
     <section>
       <router-view></router-view>
-      <!-- <Footer class="main-page__footer" /> -->
+      <Footer class="main-page__footer" />
     </section>
   </div>
 </template>
@@ -15,7 +15,7 @@
 
 import Header from './components/Header'
 import Navigation from './components/Navigation'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 export default {
   data () {
@@ -25,8 +25,8 @@ export default {
   },
   components: {
     Header,
-    Navigation
-    // Footer
+    Navigation,
+    Footer
   },
   watch: {
     $route () {
@@ -75,6 +75,10 @@ body {
     bottom: 10vh;
     width: 100% - (100 / 6);
     height: 2em;
+
+    @include phone {
+      width: 100%;
+    }
   }
 }
 </style>
