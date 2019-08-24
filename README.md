@@ -4,5 +4,7 @@
 
 ## Technological stack
 
+My first commercial project in which I was cheated
+
 - [Vue](https://vuejs.org/)
 - [Vue-router](https://router.vuejs.org)
